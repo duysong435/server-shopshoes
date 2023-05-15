@@ -39,6 +39,7 @@ class ProductController {
             const response = await getAllProductLimitService(offset)
             return res.status(200).json(response)
         } catch (error) {
+            console.log('Day la loi: ', error)
             return res.status(500).json({
                 errCode: 1,
                 errMessage: "Error from server!"
