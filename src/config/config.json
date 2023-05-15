@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "db_shoshoes_user",
+    "password": "fyEnoBWYndK47ZRAJ5600vVk6xiqfUmt",
+    "database": "db_shoshoes",
+    "host": "dpg-chfrd6ik728sd6hdspo0-a.singapore-postgres.render.com",
+    "dialect": "postgres",
+    "timezone": "+07:00",
+    "logging": false,
+    "dialectOptions":{
+      "ssl":{
+        "require":true,
+        "rejectUnauthorized":false
+      }
+    }
+  },
+  "production": {
+    "username": "db_shoshoes_user",
+    "password": "fyEnoBWYndK47ZRAJ5600vVk6xiqfUmt",
+    "database": "db_shoshoes",
+    "host": "dpg-chfrd6ik728sd6hdspo0-a.singapore-postgres.render.com",
+    "dialect": "postgres",
+    "timezone": "+07:00"
+  }
+}
