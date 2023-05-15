@@ -20,6 +20,12 @@
     "database": "db_shoshoes",
     "host": "dpg-chfrd6ik728sd6hdspo0-a.singapore-postgres.render.com",
     "dialect": "postgres",
-    "timezone": "+07:00"
+    "timezone": "+07:00",
+    "dialectOptions":{
+      "ssl":{
+        "require":true,
+        "rejectUnauthorized":false
+      }
+    }
   }
 }
