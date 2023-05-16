@@ -21,7 +21,7 @@ const loginUserServices = (data) => {
             })
             console.log(response)
             const isCorrectPassword = response && bcrypt.compareSync(data.password, response.password)
-            const token = isCorrectPassword && jwt.sign({ id: response.id, email: response.email }, process.env.SECRET_KEY, { expiresIn: '2d' })
+            const token = isCorrectPassword && jwt.sign({ id: response.id, email: response.email, role_id: response.role_id }, process.env.SECRET_KEY, { expiresIn: '2d' })
             resolve({
                 errCode: token ? 0 : 2,
                 errMessage: token ? 'Login is successfully !' : response ? 'Password is wrong !' : 'Email not found !',
@@ -145,7 +145,7 @@ const updateUserService = (data) => {
                 user.address = data.address;
                 user.role_id = data.role_id;
                 user.gender = data.gender;
-                user.phone_number = data.phone_number;
+                user.phone_number = data.phoneNumber;
                 if (data.image) {
                     user.image = data.image
                 }

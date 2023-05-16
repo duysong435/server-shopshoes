@@ -13,9 +13,12 @@ const verifyToken = (req, res, next) => {
             errMessage: 'Access token expired'
         })
 
-        // req.user = user
-        // console.log(req.user)
-        // console.log(user)
+        if (user?.role_id !== 'R1') {
+            return res.status(200).json({
+                errCode: 1,
+                errMessage: 'Khong co quyen Admin'
+            })
+        }
         next()
     })
 
