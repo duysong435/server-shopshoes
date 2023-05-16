@@ -85,7 +85,7 @@ const getAllUserLimitService = (offset) => {
                 // ],
                 // attributes: ['id', 'title', 'star', 'address', 'description']
                 attributes: {
-                    exclude: ['password', 'image']
+                    exclude: ['password']
                 }
             })
             resolve({
